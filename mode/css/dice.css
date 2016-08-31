@@ -1,0 +1,154 @@
+body{
+	background:#333;
+}
+.box{
+	width:300px;
+	height:300px;
+	/*border:3px solid #333;*/
+	position: relative;
+	margin:100px auto;
+	transform-style:preserve-3d;		
+	transition: all 3s;
+}
+.box:hover{
+	animation-play-state: paused;
+}
+.move{
+	animation: move 3s linear 0s 1;
+}
+@keyframes move{
+		from{
+			transform: rotateX(0deg) rotateY(0deg);
+		}
+		to{
+			transform: rotateX(360deg) rotateY(360deg);
+		}
+}
+.hiden{
+	backface-visibility: hidden;
+}
+.box div{
+	perspective:20000px;
+	position: absolute;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.5);
+	background:radial-gradient(rgba(255,255,255,0.9) ,rgba(0,0,0,0.9) 60%,rgba(255,0,0,0.9));
+	padding:10%;
+	box-sizing: border-box;
+	border-radius: 40px;
+	
+}
+.box div p{
+	width:80px;
+	height:80px;
+	background:yellow;
+	border-radius: 50%;
+	margin:0;
+	background:radial-gradient(yellow ,#fff,blue);
+}
+/*第一个*/
+.box div:first-child{
+	display:flex;
+	flex-flow:row nowrap;
+	align-items: center;
+	justify-content:center;
+	transform:translateZ(150px) ;
+}
+/*第二个*/
+.box div:nth-child(2){
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content: space-between;
+	transform:rotateX(90deg) translateZ(150px);
+}
+.box div:nth-child(2) p:last-child{
+	align-self: flex-end;
+}
+/*第三个*/
+h1{
+	margin:0;
+	padding:0;
+}
+.box div:nth-child(3){
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content: space-between;
+	transform: rotateY(-90deg) translateZ(150px);
+}
+.box div:nth-child(3) p:nth-child(2){
+	align-self: center;
+}
+.box div:nth-child(3) p:last-child{
+	align-self: flex-end;
+}
+/*第四个*/
+.box div:nth-child(4){
+	display:flex;
+	flex-flow:row wrap;
+	justify-content: space-between;
+	transform:translateY(150px) rotateX(-90deg);
+}
+.box div:nth-child(4) h1:first-child{
+	display:flex;
+	flex-flow:column wrap;
+	justify-content: space-between;
+}
+.box div:nth-child(4) h1:last-child{
+	display:flex;
+	flex-flow:column wrap;
+	justify-content: space-between;
+}
+/*第五个*/
+.box div:nth-child(5){
+	display:flex;
+	flex-flow:row wrap;
+	justify-content: space-between;
+	transform:translate(150px) rotateY(90deg);
+}
+.box div:nth-child(5) h1:first-child{
+	display:flex;
+	flex-flow:column wrap;
+	justify-content: space-between;
+}
+.box div:nth-child(5) h1:last-child{
+	display:flex;
+	flex-flow:column wrap;
+	justify-content: space-between;
+}
+.box div:nth-child(5) h1:nth-child(2){
+	display:flex;
+	flex-flow:column wrap;
+	justify-content: center;
+}
+/*第六个*/
+.box div:nth-child(6){
+	display:flex;
+	flex-flow:row wrap;
+	justify-content: space-between;
+	transform:translateZ(-150px) rotateX(180deg);
+}
+.box div:nth-child(6) h1:first-child{
+	display:flex;
+	flex-flow:column wrap;
+	justify-content: space-between;
+}
+.box div:nth-child(6) h1:last-child{
+	display:flex;
+	flex-flow:column wrap;
+	justify-content: space-between;
+}
+.box div:nth-child(6) h1:nth-child(2){
+	display:flex;
+	flex-flow:column wrap;
+	justify-content: space-between;
+}
+input{
+	width:100px;
+	height:40px;
+	background:red;
+	border:none;
+	outline:none;
+	border-radius: 20px;
+	margin:3% 47%;
+}

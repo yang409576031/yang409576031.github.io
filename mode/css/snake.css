@@ -1,0 +1,111 @@
+body,div,h5{
+	margin:0;
+	padding:0;
+}
+.snake{
+	width:100vw;
+	height:100vh;
+	background: #ccc;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+}
+/*分数*/
+.scod{
+	width:100px;
+	height:50px;
+	background:#fff;
+	position: absolute;
+	right:50px;
+	top:-70px;
+	border-radius: 10px;
+	text-align: center;
+	padding-top:18px;
+	box-sizing: border-box;
+	font-size:20px;
+	position: absolute;
+}
+.scod button{
+	position: absolute;
+	background:#fff;
+	border:1px solid #ccc;
+	outline: none;
+	width:100px;
+	height:50px;
+	left:-200px;
+	top:0;
+	border-radius: 10px;
+}
+.snake_box{
+	height:400px;
+	width:400px;
+	background:#fff;
+	position: relative;
+	background:url(../img/1_2.jpg) repeat;
+	background-size:20px 20px;
+	margin:0 auto;
+}
+.snake_box .shead{
+	position: absolute;
+	background:yellow;
+	background: url(../img/1_05.jpg);
+	background-size:100% 100%;
+}
+.snake_box .sfood{
+	position: absolute;
+	background:blue;
+	background-image: url(../img/1_03.jpg);
+	background-size:100% 100%;
+}
+.snake_box .sbox{
+	position: absolute;
+	background:blue;
+	background:red;
+	background-image: url(../img/1_07.jpg);
+	background-size:100% 100%;
+}
+
+/*遮照*/
+.swper{
+	width: 100vw;
+	height:100vh;
+	background:rgba(5,48,126,0.5);;
+	position: absolute;
+	left:0;
+	top:0;
+	z-index:100;
+	display:none;
+}
+.title{
+	width:200px;
+	height:200px;
+	position: absolute;
+	left:0;
+	top:0;
+	bottom:0;
+	right:0;
+	margin:auto;
+	background:#000;
+	border-radius:50%;
+	z-index:101;
+}
+.title h5{
+	width:80px;
+	height:40px;
+	background:#fff;
+	border-radius: 10px;
+	text-align:center;
+	line-height: 40px;
+	margin:50px auto;
+}
+.title button{
+	display: block;
+	width:80px;
+	height:40px;
+	background:#fff;
+	border:1px solid #ccc;
+	border-radius: 10px;
+	outline: none;
+	margin:-30px auto;
+	font-weight: 700;
+}

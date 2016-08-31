@@ -1,0 +1,168 @@
+body,h2{
+	padding:0;
+	margin:0;
+}
+section h2{
+	text-align:center;
+	line-height:70px;
+}
+section{
+	position: relative;
+	overflow:hidden;
+	display: flex;
+	height:100vh;
+	flex-flow: column nowrap;
+    justify-content: space-between;
+    background: linear-gradient(top , rgb(41, 188, 176) 16% , rgb(181, 229, 115) 93%);
+	background: -o-linear-gradient(top , rgb(41, 188, 176) 16% , rgb(181, 229, 115) 93%);
+	background: -ms-linear-gradient(top , rgb(41, 188, 176) 16% , rgb(181, 229, 115) 93%);
+	background: -moz-linear-gradient(top , rgb(41, 188, 176) 16% , rgb(181, 229, 115) 93%);
+	background: -webkit-linear-gradient(top , rgb(41, 188, 176) 16% , rgb(181, 229, 115) 93%);
+}
+header{
+	background:#333;
+	color:#fff;
+}
+#listBtn{
+	position: absolute;
+	right:1vw;
+	top:23px;
+	font-size:25px;
+}
+#musicList{
+	background:#ccc;	
+	display:none;
+	position: absolute;
+	left:0;
+	top:70px;
+	width:100vw;
+	padding:0;
+}
+#musicList li{
+	list-style:none;
+	text-align: center;
+	line-height:40px;
+	font-size:15px;
+}
+#musicList .on{
+	background:yellow;
+}
+#musicPic{
+	display: flex;
+	flex-flow:row nowrap;
+	justify-content: center;
+}
+footer{
+	height:65px;
+	background:#333;
+	color:#fff;
+	padding:20px;
+	font-size:25px;
+	text-align:center;
+	position: relative;
+}
+footer span:nth-of-type(2){
+	margin:0 10px;
+}
+/*@keyframes musicMove{
+	0%{
+		transform:rotate(0deg);
+	}
+	100%{
+		transform:rotate(720deg);
+	}
+}*/
+.musicScroll{
+	height:10px;
+	width:100vw;
+	position: absolute;
+	top:-10px;
+	left:0px;
+	background: #ccc;
+}
+.musicScroll p{
+	position: absolute;
+}
+.musicProgress{
+	width:20px;
+	height:20px;
+	border-radius: 50%;
+	background:#fff;
+	top:-5px;
+	left:0px;
+	border:1px solid #ccc;
+}
+.musicProgressW{
+	width:0vw;
+	height:10px;
+	left:0;
+	top:0;
+	background:yellow;
+}
+/*音量控制*/
+#musicVolume{
+	position: absolute;
+	right:10px;
+	top:20px;
+}
+.musicVolume{
+	position: absolute;
+	left:0;
+	bottom:25px;
+	display:none;
+}
+.musicVolume p{
+	position: absolute;
+}
+.valumeToall{
+	width:8px;
+	height:100px;
+	background:#ccc;
+	bottom:0px;
+	left:5px;	
+	border-radius: 5px;
+}
+.valumeScroll{
+	width:15px;
+	height:15px;
+	background:#fff;
+	border-radius: 50%;
+	bottom:40px;
+	z-index:3;
+	left:1px;
+	border:1px solid #ccc;
+}
+.valumeProgess{
+	height:40px;
+	width:8px;
+	left:5px;
+	bottom:0px;
+	background:yellow;
+	border-radius:0 0 5px 5px;
+}
+
+
+/*播放顺序*/
+#musicLoop{
+	position: absolute;
+	right:60px;
+	top:20px;
+	font-size:20px;
+}
+.musicLoop{
+	position: absolute;
+	left:-45px;
+	bottom:48px;
+	width:100px;
+	background:#333;
+	border-radius:5px;
+	font-size:16px;
+	display:none;
+}
+.musicLoop p{
+	line-height:30px;
+	height:30px;
+}
+.musicLoop .loopColor{
+	background:yellow;
+}

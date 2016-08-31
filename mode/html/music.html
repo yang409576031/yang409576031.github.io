@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/music.css" />
+		
+	</head>
+	<body>
+		<section>
+			<audio src="" id="music"></audio>
+			<header>
+				<h2>音乐播放器</h2>
+				<span id="listBtn" class="glyphicon glyphicon-menu-hamburger "></span>
+			</header>
+			<ul id="musicList">
+				<li>MC天佑-曾经的王者</li>
+				<li>陈泓志-小甜蜜</li>
+				<li>张俊熙-我是一个酒鬼</li>
+			</ul>
+			<div id="musicPic">
+				<img src="../img/1.jpg" class="img-circle"/>
+			</div>
+			
+			<footer>
+				<span class="prev glyphicon glyphicon-backward "></span>
+				<span class="playmusic glyphicon glyphicon-play "></span>
+				<span class="next glyphicon glyphicon-forward "></span>
+				<span class="musicTimes">00:00</span>
+				<div class="musicScroll">
+					<p class="musicProgress"></p>
+					<p class="musicProgressW"></p>
+					<p></p>
+				</div>
+				<div id="musicVolume">
+					<span class="glyphicon glyphicon-volume-up"></span>
+					<div class="musicVolume">
+						<p class="valumeToall"></p>
+						<p class="valumeScroll"></p>
+						<p class="valumeProgess"></p>
+					</div>
+				</div>
+				<div id="musicLoop">
+					<span class="musicLoopO glyphicon glyphicon-refresh"></span>
+					<div class="musicLoop">
+						<p class="musicLoopOr">顺序播放</p>
+						<p class="musicLoopS">随机播放</p>
+						<p class="musicLoopR">单曲循环</p>
+					</div>
+				</div>
+			</footer>
+		</section>
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.12.4.js">	
+	</script>
+	<script type="text/javascript" src="../js/music.js">
+		
+	</script>
+</html>

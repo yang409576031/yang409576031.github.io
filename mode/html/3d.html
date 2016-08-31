@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旋转</title>
+    
+    <style>
+    	body{
+    		background:#ccc;
+    	}
+        .box{
+            width:200px;
+            height:300px;
+            position: relative;
+            margin:200px auto;
+            transform-style: preserve-3d;
+            animation:move 10s linear 0s infinite;
+        }
+        .box div{
+            width:100%;
+            height:100%;
+            overflow:hidden;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        .box div img{
+            width: 100%;
+            height:100%;
+        }
+        @keyframes move {
+            0%{
+                transform:rotateX(-10deg) rotateY(0deg);
+            }
+            50%{
+                transform:rotateX(5deg) rotateY(180deg) ;
+            }
+            100%{
+                transform:rotateX(-10deg)  rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+</div>
+<script src="../js/jquery-1.12.4.js"></script>
+<script>
+    for(var a=1;a<13;a++){
+        $("<div><img src='../img/img/"+a+".jpg'></div>").appendTo($(".box"))
+    }
+    $(".box>div").each(function(index){
+        $(this).css({
+            transform:"rotateY("+30*index+"deg) translateZ(500px)",
+            perspective: "3000px",
+        })
+    })
+</script>
+</body>
+</html>
